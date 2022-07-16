@@ -23,6 +23,7 @@
 		6CD506362882F2E800107E70 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506332882F2E800107E70 /* Inter-Regular.ttf */; };
 		6CD506372882F2E800107E70 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506342882F2E800107E70 /* Poppins-Bold.ttf */; };
 		6CD506382882F2E800107E70 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506352882F2E800107E70 /* Inter-SemiBold.ttf */; };
+		6CD5063B2882F46900107E70 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD5063A2882F46900107E70 /* CustomFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		6CD506332882F2E800107E70 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		6CD506342882F2E800107E70 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		6CD506352882F2E800107E70 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		6CD506392882F34500107E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6CD5063A2882F46900107E70 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +78,11 @@
 		6CD5060F2882E39600107E70 /* RiveAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				6CD506392882F34500107E70 /* Info.plist */,
 				6CD506102882E39600107E70 /* RiveAnimationsApp.swift */,
 				6CD506122882E39600107E70 /* ContentView.swift */,
 				6CD506302882E75F00107E70 /* OnboardingView.swift */,
+				6CD5063A2882F46900107E70 /* CustomFont.swift */,
 				6CD506142882E39900107E70 /* Assets.xcassets */,
 				6CD506322882F2E800107E70 /* Fonts */,
 				6CD5061E2882E3F600107E70 /* RiveAssets */,
@@ -205,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CD506312882E75F00107E70 /* OnboardingView.swift in Sources */,
+				6CD5063B2882F46900107E70 /* CustomFont.swift in Sources */,
 				6CD506132882E39600107E70 /* ContentView.swift in Sources */,
 				6CD506112882E39600107E70 /* RiveAnimationsApp.swift in Sources */,
 			);
@@ -338,6 +344,7 @@
 				DEVELOPMENT_TEAM = PD76FHD37G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RiveAnimations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +374,7 @@
 				DEVELOPMENT_TEAM = PD76FHD37G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RiveAnimations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
