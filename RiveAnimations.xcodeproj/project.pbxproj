@@ -19,6 +19,10 @@
 		6CD5062B2882E3F600107E70 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506242882E3F600107E70 /* button.riv */; };
 		6CD5062C2882E3F600107E70 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506252882E3F600107E70 /* icons.riv */; };
 		6CD5062F2882E71900107E70 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 6CD5062E2882E71900107E70 /* RiveRuntime */; };
+		6CD506312882E75F00107E70 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD506302882E75F00107E70 /* OnboardingView.swift */; };
+		6CD506362882F2E800107E70 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506332882F2E800107E70 /* Inter-Regular.ttf */; };
+		6CD506372882F2E800107E70 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506342882F2E800107E70 /* Poppins-Bold.ttf */; };
+		6CD506382882F2E800107E70 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506352882F2E800107E70 /* Inter-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		6CD506232882E3F600107E70 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
 		6CD506242882E3F600107E70 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
 		6CD506252882E3F600107E70 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		6CD506302882E75F00107E70 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6CD506332882F2E800107E70 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		6CD506342882F2E800107E70 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		6CD506352882F2E800107E70 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +77,9 @@
 			children = (
 				6CD506102882E39600107E70 /* RiveAnimationsApp.swift */,
 				6CD506122882E39600107E70 /* ContentView.swift */,
+				6CD506302882E75F00107E70 /* OnboardingView.swift */,
 				6CD506142882E39900107E70 /* Assets.xcassets */,
+				6CD506322882F2E800107E70 /* Fonts */,
 				6CD5061E2882E3F600107E70 /* RiveAssets */,
 				6CD506162882E39900107E70 /* Preview Content */,
 			);
@@ -96,6 +106,16 @@
 				6CD506252882E3F600107E70 /* icons.riv */,
 			);
 			path = RiveAssets;
+			sourceTree = "<group>";
+		};
+		6CD506322882F2E800107E70 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6CD506332882F2E800107E70 /* Inter-Regular.ttf */,
+				6CD506342882F2E800107E70 /* Poppins-Bold.ttf */,
+				6CD506352882F2E800107E70 /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,12 +182,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD506382882F2E800107E70 /* Inter-SemiBold.ttf in Resources */,
 				6CD5062A2882E3F600107E70 /* shapes.riv in Resources */,
 				6CD506282882E3F600107E70 /* check.riv in Resources */,
 				6CD506182882E39900107E70 /* Preview Assets.xcassets in Resources */,
 				6CD506292882E3F600107E70 /* menu_button.riv in Resources */,
 				6CD506262882E3F600107E70 /* house.riv in Resources */,
 				6CD5062B2882E3F600107E70 /* button.riv in Resources */,
+				6CD506362882F2E800107E70 /* Inter-Regular.ttf in Resources */,
+				6CD506372882F2E800107E70 /* Poppins-Bold.ttf in Resources */,
 				6CD506152882E39900107E70 /* Assets.xcassets in Resources */,
 				6CD506272882E3F600107E70 /* confetti.riv in Resources */,
 				6CD5062C2882E3F600107E70 /* icons.riv in Resources */,
@@ -181,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD506312882E75F00107E70 /* OnboardingView.swift in Sources */,
 				6CD506132882E39600107E70 /* ContentView.swift in Sources */,
 				6CD506112882E39600107E70 /* RiveAnimationsApp.swift in Sources */,
 			);
