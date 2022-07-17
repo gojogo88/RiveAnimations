@@ -12,6 +12,7 @@
 		6C1E134028841D8000468BB0 /* VCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E133F28841D8000468BB0 /* VCard.swift */; };
 		6C1E13422884361100468BB0 /* HCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E13412884361100468BB0 /* HCard.swift */; };
 		6C1E13442884374300468BB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E13432884374300468BB0 /* HomeView.swift */; };
+		6C1E134628843B2D00468BB0 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E134528843B2D00468BB0 /* SideMenu.swift */; };
 		6CD506112882E39600107E70 /* RiveAnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD506102882E39600107E70 /* RiveAnimationsApp.swift */; };
 		6CD506132882E39600107E70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD506122882E39600107E70 /* ContentView.swift */; };
 		6CD506152882E39900107E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD506142882E39900107E70 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		6C1E133F28841D8000468BB0 /* VCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCard.swift; sourceTree = "<group>"; };
 		6C1E13412884361100468BB0 /* HCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCard.swift; sourceTree = "<group>"; };
 		6C1E13432884374300468BB0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6C1E134528843B2D00468BB0 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		6CD5060D2882E39600107E70 /* RiveAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiveAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD506102882E39600107E70 /* RiveAnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiveAnimationsApp.swift; sourceTree = "<group>"; };
 		6CD506122882E39600107E70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				6CD506122882E39600107E70 /* ContentView.swift */,
 				6CE05B392884014B004E7F5E /* TabBar.swift */,
 				6C1E13432884374300468BB0 /* HomeView.swift */,
+				6C1E134528843B2D00468BB0 /* SideMenu.swift */,
 				6C1E133F28841D8000468BB0 /* VCard.swift */,
 				6C1E13412884361100468BB0 /* HCard.swift */,
 				6C1E133A28841D2C00468BB0 /* Model */,
@@ -263,6 +266,7 @@
 				6C1E13422884361100468BB0 /* HCard.swift in Sources */,
 				6C1E133C28841D3700468BB0 /* Course.swift in Sources */,
 				6C1E13442884374300468BB0 /* HomeView.swift in Sources */,
+				6C1E134628843B2D00468BB0 /* SideMenu.swift in Sources */,
 				6CD506312882E75F00107E70 /* OnboardingView.swift in Sources */,
 				6CD5063B2882F46900107E70 /* CustomFont.swift in Sources */,
 				6CD5063F2882FC2100107E70 /* CustomTextField.swift in Sources */,
