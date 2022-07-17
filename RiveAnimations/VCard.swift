@@ -23,7 +23,7 @@ struct VCard: View {
                 .customFont(.footnote2)
             Spacer()
             HStack {
-                ForEach(Array([4, 5, 6].shuffled().enumerated(), id: \.offset) { index, number in
+                ForEach(Array([4, 5, 6].shuffled().enumerated()), id: \.offset) { index, number in
                     Image("Avatar \(number)")
                         .resizable()
                         .frame(width: 44, height: 44)
@@ -35,7 +35,7 @@ struct VCard: View {
         .foregroundColor(.white)
         .padding(30)
         .frame(width: 260, height: 310)
-        .background(.LinearGradient(colors: [course.color, course.color.opacity(0.5)], startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(.linearGradient(colors: [course.color, course.color.opacity(0.5)], startPoint: .topLeading, endPoint: .bottomTrailing))
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .shadow(color: course.color.opacity(0.3), radius: 8, x: 0, y: 12)
         .shadow(color: course.color.opacity(0.3), radius: 2, x: 0, y: 1)
