@@ -43,6 +43,6 @@ struct MenuRow: View {
 
 struct MenuRow_Previews: PreviewProvider {
     static var previews: some View {
-        MenuRow(item: menuItmes[0], selectedMenu: .constant(.home))
+        MenuRow(selectedMenu: .constant(.home), item: menuItems[0])
     }
 }

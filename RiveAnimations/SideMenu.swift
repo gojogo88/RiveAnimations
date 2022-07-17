@@ -11,10 +11,10 @@ struct MenuItem: Identifiable {
     var id = UUID()
     var text: String
     var icon: RiveViewModel
-    var menu: selectedMenu
+    var menu: SelectedMenu
 }
 
-enum selectedMenu: String {
+enum SelectedMenu: String {
     case home
     case search
     case favorites
@@ -26,23 +26,23 @@ enum selectedMenu: String {
 
 var menuItems = [
     MenuItem(text: "Home", icon: RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME"), menu: .home),
-    MenuItem(text: "Search", icon: RiveViewModel(fileName: "icons", stateMachineName: "SEARCH_interactivity", artboardName: "SEARCH"), menu: .search),
-    MenuItem(text: "Favorites", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
-    MenuItem(text: "Help", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_interactivity", artboardName: "CHAT"), menu: .help)
+    MenuItem(text: "Search", icon: RiveViewModel(fileName: "icons", stateMachineName: "SEARCH_Interactivity", artboardName: "SEARCH"), menu: .search),
+    MenuItem(text: "Favorites", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_Interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
+    MenuItem(text: "Help", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), menu: .help)
 ]
 
 var menuItems2 = [
-    MenuItem(text: "History", icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_interactivity", artboardName: "TIMER"), menu: .history),
-    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_interactivity", artboardName: "BELL"), menu: .notifications)
+    MenuItem(text: "History", icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), menu: .history),
+    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
 ]
 
 var menuItems3 = [
-    MenuItem(text: "Dark Mode", icon: RiveViewModel(fileName: "icons", stateMachineName: "SETTINGS_interactivity", artboardName: "SETTINGS"), menu: .darkMode)
+    MenuItem(text: "Dark Mode", icon: RiveViewModel(fileName: "icons", stateMachineName: "SETTINGS_Interactivity", artboardName: "SETTINGS"), menu: .darkMode)
 ]
 
 
 struct SideMenu: View {
-    @State private var selectedMenu: SeleectedMenu = .home
+    @State private var selectedMenu: SelectedMenu = .home
     @State private var isDarkMode = false
     let icon = RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME")
     
@@ -80,7 +80,7 @@ struct SideMenu: View {
                         .opacity(0.1)
                         .padding(.horizontal)
                     
-                    MenuRow(item: item, selectedMenu: $selectedMenu)
+                    MenuRow(selectedMenu: $selectedMenu, item: item)
                 }
             }
             .padding(8)
@@ -99,7 +99,7 @@ struct SideMenu: View {
                         .opacity(0.1)
                         .padding(.horizontal)
                     
-                    MenuRow(item: item, selectedMenu: $selectedMenu)
+                    MenuRow(selectedMenu: $selectedMenu, item: item)
                 }
             }
             .padding(8)
@@ -107,7 +107,7 @@ struct SideMenu: View {
             Spacer()
             
             HStack(spacing: 14) {
-                menuitems3[0].icon.view()
+                menuItems3[0].icon.view()
                     .frame(width: 32, height: 32)
                     .opacity(0.6)
                     .onChange(of: isDarkMode) { newValue in
@@ -117,7 +117,7 @@ struct SideMenu: View {
                             menuItems3[0].icon.setInput("active", value: false)
                         }
                     }
-                Text(menuitems3[0].text)
+                Text(menuItems3[0].text)
                     .customFont(.headline)
                 Toggle("", isOn: $isDarkMode)
             }

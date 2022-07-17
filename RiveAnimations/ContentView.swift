@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .chat
     @State private var isOpen = false
+    @State private var show = false
     let menuButton = RiveViewModel(fileName: "menu_button", stateMachineName: "State Machine", autoPlay: false)
     
     var body: some View {
@@ -45,8 +46,23 @@ struct ContentView: View {
             .rotation3DEffect(.degrees(isOpen ? 30 : 0), axis: (x: 0, y: -1, z: 0))
             .offset(x: isOpen ? 265 : 0)
             .scaleEffect(isOpen ? 0.9 : 1)
+            .scaleEffect(show ? 0.92 : 1)
             .ignoresSafeArea()
             
+            Image(systemName: "person")
+                .frame(width: 36, height: 36)
+                .background(.white)
+                .mask(Circle())
+                .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        show = true
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding()
+                .offset(y: 4)
+                .offset(x: isOpen ? 100 : 0)
             
             menuButton.view()
                 .frame(width: 44, height: 44)
@@ -63,6 +79,18 @@ struct ContentView: View {
                 }
             TabBar()
                 .offset(y: isOpen ? 300 : 0)
+                .offset(y: show ? 200 : 0)
+            
+            if show {
+                OnboardingView(show: $show)
+                    .background(.white)
+                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                    .shadow(color: .black.opacity(0.5), radius: 40, x: 0, y: 40)
+                    .ignoresSafeArea(.all, edges: .top)
+                    .transition(.move(edge: .top))
+                    .offset(y: show ? -10 : 0)
+                    .zIndex(1) // used when doing transitions
+            }
         }
     }
 }
