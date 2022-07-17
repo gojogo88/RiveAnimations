@@ -27,6 +27,7 @@
 		6CD5063D2882F86400107E70 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD5063C2882F86400107E70 /* SignInView.swift */; };
 		6CD5063F2882FC2100107E70 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD5063E2882FC2100107E70 /* CustomTextField.swift */; };
 		6CE05B362883F26B004E7F5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE05B352883F26B004E7F5E /* Extensions.swift */; };
+		6CE05B3A2884014B004E7F5E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE05B392884014B004E7F5E /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		6CD5063C2882F86400107E70 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		6CD5063E2882FC2100107E70 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6CE05B352883F26B004E7F5E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6CE05B392884014B004E7F5E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				6CD506392882F34500107E70 /* Info.plist */,
 				6CD506102882E39600107E70 /* RiveAnimationsApp.swift */,
 				6CD506122882E39600107E70 /* ContentView.swift */,
+				6CE05B392884014B004E7F5E /* TabBar.swift */,
 				6CE05B372883FFFF004E7F5E /* Views */,
 				6CE05B3828840016004E7F5E /* Styles */,
 				6CD506142882E39900107E70 /* Assets.xcassets */,
@@ -237,6 +240,7 @@
 				6CD506312882E75F00107E70 /* OnboardingView.swift in Sources */,
 				6CD5063B2882F46900107E70 /* CustomFont.swift in Sources */,
 				6CD5063F2882FC2100107E70 /* CustomTextField.swift in Sources */,
+				6CE05B3A2884014B004E7F5E /* TabBar.swift in Sources */,
 				6CD506132882E39600107E70 /* ContentView.swift in Sources */,
 				6CD506112882E39600107E70 /* RiveAnimationsApp.swift in Sources */,
 				6CD5063D2882F86400107E70 /* SignInView.swift in Sources */,
