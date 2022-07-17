@@ -77,9 +77,27 @@ struct ContentView: View {
                         isOpen.toggle()
                     }
                 }
+                .onChange(of: isOpen) { newValue in
+                    if newValue {
+                        //UIViewController.preferredStatusBarStyle = .lightContent
+                        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+                    } else {
+                        //UIViewController.preferredStatusBarStyle = .darkContent
+                        UIApplication.shared.setStatusBarStyle(.darkContent, animated: true)
+                    }
+                }
+            
             TabBar()
                 .offset(y: isOpen ? 300 : 0)
                 .offset(y: show ? 200 : 0)
+                .offset(y: -24)
+                .background(
+                    LinearGradient(colors: [Color("Background").opacity(0), Color("Background")], startPoint: .top, endPoint: .bottom)
+                    .frame(height: 150)
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                    .allowsHitTesting(false)
+                )
+                .ignoresSafeArea()
             
             if show {
                 OnboardingView(show: $show)

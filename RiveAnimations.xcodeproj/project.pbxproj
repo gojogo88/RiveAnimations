@@ -90,6 +90,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6C1E134928844D6200468BB0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6C1E1347288441B000468BB0 /* MenuRow.swift */,
+				6C1E133F28841D8000468BB0 /* VCard.swift */,
+				6C1E13412884361100468BB0 /* HCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6C1E134A28844D7E00468BB0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6CD506122882E39600107E70 /* ContentView.swift */,
+				6CE05B392884014B004E7F5E /* TabBar.swift */,
+				6C1E134528843B2D00468BB0 /* SideMenu.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		6CD506042882E39600107E70 = {
 			isa = PBXGroup;
 			children = (
@@ -111,13 +131,8 @@
 			children = (
 				6CD506392882F34500107E70 /* Info.plist */,
 				6CD506102882E39600107E70 /* RiveAnimationsApp.swift */,
-				6CD506122882E39600107E70 /* ContentView.swift */,
-				6CE05B392884014B004E7F5E /* TabBar.swift */,
-				6C1E13432884374300468BB0 /* HomeView.swift */,
-				6C1E134528843B2D00468BB0 /* SideMenu.swift */,
-				6C1E1347288441B000468BB0 /* MenuRow.swift */,
-				6C1E133F28841D8000468BB0 /* VCard.swift */,
-				6C1E13412884361100468BB0 /* HCard.swift */,
+				6C1E134A28844D7E00468BB0 /* Navigation */,
+				6C1E134928844D6200468BB0 /* Components */,
 				6C1E133A28841D2C00468BB0 /* Model */,
 				6CE05B372883FFFF004E7F5E /* Views */,
 				6CE05B3828840016004E7F5E /* Styles */,
@@ -164,6 +179,7 @@
 		6CE05B372883FFFF004E7F5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6C1E13432884374300468BB0 /* HomeView.swift */,
 				6CD506302882E75F00107E70 /* OnboardingView.swift */,
 				6CD5063C2882F86400107E70 /* SignInView.swift */,
 			);
