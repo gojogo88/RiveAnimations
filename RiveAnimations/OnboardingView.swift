@@ -16,10 +16,31 @@ struct OnboardingView: View {
             background
             
             content
+                .offset(y: showModal ? -50 : 0)
+            
+            Color("Shadow")
+                .opacity(showModal ? 0.4 : 0)
+                .ignoresSafeArea()
             
             if showModal {
                 SignInView()
-                    .transition(.move(edge: .bottom))
+                    .transition(.move(edge: .top).combined(with: .opacity))
+                    .overlay {
+                        Button {
+                            withAnimation(.spring()) {
+                                showModal = false
+                            }
+                        } label: {
+                            Image(systemName: "xmark")
+                                .frame(width: 36, height: 36)
+                                .foregroundColor(.black)
+                                .background(.white)
+                                .mask(Circle())
+                            .shadow(color: Color("Shadow").opacity(0.3), radius: 5, x: 0, y: 3)
+                        }
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                    }
+                    .zIndex(1)
             }
         }
     }
