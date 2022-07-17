@@ -11,16 +11,39 @@ struct MenuItem: Identifiable {
     var id = UUID()
     var text: String
     var icon: RiveViewModel
+    var menu: selectedMenu
+}
+
+enum selectedMenu: String {
+    case home
+    case search
+    case favorites
+    case help
+    case history
+    case notifications
+    case darkMode
 }
 
 var menuItems = [
-    MenuItem(text: "Home", icon: RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME")),
-    MenuItem(text: "Search", icon: RiveViewModel(fileName: "icons", stateMachineName: "SEARCH_interactivity", artboardName: "SEARCH")),
-    MenuItem(text: "Favorites", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_interactivity", artboardName: "LIKE/STAR")),
-    MenuItem(text: "Help", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_interactivity", artboardName: "CHAT"))
+    MenuItem(text: "Home", icon: RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME"), menu: .home),
+    MenuItem(text: "Search", icon: RiveViewModel(fileName: "icons", stateMachineName: "SEARCH_interactivity", artboardName: "SEARCH"), menu: .search),
+    MenuItem(text: "Favorites", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
+    MenuItem(text: "Help", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_interactivity", artboardName: "CHAT"), menu: .help)
 ]
 
+var menuItems2 = [
+    MenuItem(text: "History", icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_interactivity", artboardName: "TIMER"), menu: .history),
+    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_interactivity", artboardName: "BELL"), menu: .notifications)
+]
+
+var menuItems3 = [
+    MenuItem(text: "Dark Mode", icon: RiveViewModel(fileName: "icons", stateMachineName: "SETTINGS_interactivity", artboardName: "SETTINGS"), menu: .darkMode)
+]
+
+
 struct SideMenu: View {
+    @State private var selectedMenu: SeleectedMenu = .home
+    @State private var isDarkMode = false
     let icon = RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME")
     
     var body: some View {
@@ -57,27 +80,48 @@ struct SideMenu: View {
                         .opacity(0.1)
                         .padding(.horizontal)
                     
-                    HStack(spacing: 14) {
-                        item.icon.view()
-                            .frame(width: 32, height: 32)
-                            .opacity(0.6)
-                        
-                        Text(item.text)
-                            .customFont(.headline)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(12)
-                    .onTapGesture {
-                        item.icon.setInput("active", value: true)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            item.icon.setInput("active", value: false)
-                        }
+                    MenuRow(item: item, selectedMenu: $selectedMenu)
                 }
+            }
+            .padding(8)
+            
+            Text("HISTORY")
+                .customFont(.subheadline2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 24)
+                .padding(.top, 40)
+                .opacity(0.7)
+            
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(menuItems2) { item in
+                    Rectangle()
+                        .frame(height: 1)
+                        .opacity(0.1)
+                        .padding(.horizontal)
+                    
+                    MenuRow(item: item, selectedMenu: $selectedMenu)
                 }
             }
             .padding(8)
             
             Spacer()
+            
+            HStack(spacing: 14) {
+                menuitems3[0].icon.view()
+                    .frame(width: 32, height: 32)
+                    .opacity(0.6)
+                    .onChange(of: isDarkMode) { newValue in
+                        if newValue {
+                            menuItems3[0].icon.setInput("active", value: true)
+                        } else {
+                            menuItems3[0].icon.setInput("active", value: false)
+                        }
+                    }
+                Text(menuitems3[0].text)
+                    .customFont(.headline)
+                Toggle("", isOn: $isDarkMode)
+            }
+            .padding(20)
         }
         .foregroundColor(.white)
         .frame(maxWidth: 288, maxHeight: .infinity)
