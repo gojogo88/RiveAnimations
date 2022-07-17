@@ -87,11 +87,8 @@
 				6CD506392882F34500107E70 /* Info.plist */,
 				6CD506102882E39600107E70 /* RiveAnimationsApp.swift */,
 				6CD506122882E39600107E70 /* ContentView.swift */,
-				6CD506302882E75F00107E70 /* OnboardingView.swift */,
-				6CD5063C2882F86400107E70 /* SignInView.swift */,
-				6CD5063E2882FC2100107E70 /* CustomTextField.swift */,
-				6CD5063A2882F46900107E70 /* CustomFont.swift */,
-				6CE05B352883F26B004E7F5E /* Extensions.swift */,
+				6CE05B372883FFFF004E7F5E /* Views */,
+				6CE05B3828840016004E7F5E /* Styles */,
 				6CD506142882E39900107E70 /* Assets.xcassets */,
 				6CD506322882F2E800107E70 /* Fonts */,
 				6CD5061E2882E3F600107E70 /* RiveAssets */,
@@ -130,6 +127,25 @@
 				6CD506352882F2E800107E70 /* Inter-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6CE05B372883FFFF004E7F5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CD506302882E75F00107E70 /* OnboardingView.swift */,
+				6CD5063C2882F86400107E70 /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CE05B3828840016004E7F5E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				6CD5063E2882FC2100107E70 /* CustomTextField.swift */,
+				6CD5063A2882F46900107E70 /* CustomFont.swift */,
+				6CE05B352883F26B004E7F5E /* Extensions.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
